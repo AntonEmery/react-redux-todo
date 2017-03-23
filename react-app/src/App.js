@@ -12,13 +12,14 @@ class App extends React.Component {
 
 //stateless functional component
 const Button = (props) =>
-  <button>{props.children}</button>
+// props.children allows us to access what is b/t the Button component tags, vs just passing
+//in props
+<p>{props.children}</p>
 
 class Heart extends React.Component {
   render() {
     return <span>&hearts;</span>
   }
 }
-
 
 export default App;
