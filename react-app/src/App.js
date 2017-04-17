@@ -3,23 +3,26 @@ import React from 'react';
 /* Standard class component */
 class App extends React.Component {
 
+  testFunction() {
+    return 'testing';
+  }
+
   render() {
     return (
-      <Button>I <Heart /> React</Button>
+      <childComponent blah="test" />
+
+
+
     )
   }
 }
 
 //stateless functional component
-const Button = (props) =>
+const childComponent = (props) =>
 // props.children allows us to access what is b/t the Button component tags, vs just passing
 //in props
-<h3>{props.children}</h3>
+<h3>{props.blah}</h3>
 
-class Heart extends React.Component {
-  render() {
-    return <span>&hearts;</span>
-  }
-}
+
 
 export default App;
