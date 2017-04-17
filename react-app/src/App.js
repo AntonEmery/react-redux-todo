@@ -14,7 +14,7 @@ class App extends React.Component {
 const Button = (props) =>
 // props.children allows us to access what is b/t the Button component tags, vs just passing
 //in props
-<p>{props.children}</p>
+<h3>{props.children}</h3>
 
 class Heart extends React.Component {
   render() {
