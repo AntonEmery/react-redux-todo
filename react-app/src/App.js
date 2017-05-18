@@ -1,28 +1,27 @@
 import React from 'react';
 
+//import action functions
+
+
+
 /* Standard class component */
 class App extends React.Component {
 
-  testFunction() {
-    return 'testing';
-  }
 
-  render() {
+
+
+render() {
     return (
-      <childComponent blah="test" />
-
-
-
+      <div>
+      <p>Learning Redux</p>
+      <button onClick={this.props.increment}>Increment</button>
+      <button onClick={this.props.decrement}>Decrement</button>
+      <p>
+        Store is {this.props.value}
+      </p>
+    </div>
     )
   }
 }
-
-//stateless functional component
-const childComponent = (props) =>
-// props.children allows us to access what is b/t the Button component tags, vs just passing
-//in props
-<h3>{props.blah}</h3>
-
-
 
 export default App;
