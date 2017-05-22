@@ -1,24 +1,17 @@
 import React from 'react';
-
-//import action functions
-
-
+import Items from './items';
 
 /* Standard class component */
 class App extends React.Component {
 
-
-
-
 render() {
+    console.log(this.props);
     return (
       <div>
-      <p>Learning Redux</p>
-      <button onClick={this.props.increment}>Increment</button>
-      <button onClick={this.props.decrement}>Decrement</button>
-      <p>
-        Store is {this.props.value}
-      </p>
+      <p>Redux To Do List</p>
+        <Items items={this.props.value} />
+      <button onClick={this.props.addToDo}>Add To Do</button>
+
     </div>
     )
   }

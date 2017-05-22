@@ -1,11 +1,6 @@
-export function increment() {
+export function addToDo() {
   return {
-    type: 'INCREMENT'
-  }
-}
-
-export function decrement() {
-  return {
-    type: 'DECREMENT'
+    type: 'ADD_TODO',
+    text: 'fix vacuum'
   }
 }
