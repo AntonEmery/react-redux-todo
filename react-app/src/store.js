@@ -16,33 +16,17 @@ const defaultState = {
 }
 
 
-//simple reducer function that just returns the current state
-function todos(state = defaultState) {
+//reducer function should be the same name as the slice of state it represents
+function todos(state = defaultState.todos, action) {
+  if (action.type === 'ADD_TODO') {
+    return [...state, {text: action.text}]
+  }
   return state;
 }
 
-
-//reducer that modifies that list
-function modifyList(state = defaultState, action) {
-  switch(action.type) {
-    case 'ADD_TODO':
-    return Object.assign({}, state, {
-        todos: [
-          ...state.todos,
-          {
-            text: action.text,
-          }
-        ]
-      })
-
-  default:
-    return state;
-}
-}
-
-
-
-const rootReducer = combineReducers({todos, modifyList})
+//reducer that is passed in needs to be a key on your default state
+//or pass it in like combineReducers({todos: nameOfReducerFunction})
+const rootReducer = combineReducers({todos})
 
 //create store, tie in single reducer function
 //createStore accepts two arguments, the reducer, and an optional preloadedState value

@@ -2,10 +2,11 @@ import React from 'react';
 
 class Items extends React.Component {
   render() {
+    const {todos} = this.props.items
     return (
       <ul>
-        {this.props.items.todos.map(item => {
-          return <li>{item.text}</li>;
+        {todos.map((item, index) => {
+          return <li key={index}>{item.text}</li>;
         })}
       </ul>
     )
