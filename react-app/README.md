@@ -1,3 +1,7 @@
+## To Do List
+A simple react to do list as I learn my way around Redux.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
